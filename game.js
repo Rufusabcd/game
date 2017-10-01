@@ -107,5 +107,11 @@ function checkRoundWinner(playerPick, computerPick) {
     computerPointsElem.innerHTML = computer.score;
 }
 function findEndofGame() {
-    if ()
+    if (player.score == 10) {
+        console.log("The winner is + '' + player.name")
+    }
+  else if (computer.score == 10) {
+    console.log("The winner is computer")
+  }
 }
+console.log(findEndofGame)
