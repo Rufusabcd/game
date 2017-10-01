@@ -53,6 +53,7 @@ function newGame() {
       setGameElements();
   
       playerNameElem.innerHTML = player.name;
+      setGamePoints();
     }
   }
   function playerPick(playerPick) {
@@ -102,6 +103,10 @@ function checkRoundWinner(playerPick, computerPick) {
       }
   
   }
+  function setGamePoints() {
+    playerPointsElem.innerHTML = player.score;
+    computerPointsElem.innerHTML = computer.score;
+}
   function winCondition() {
     if (player.score == 10) {
     playerResultElem.innerText = 'Whe winner is ' + player.name
