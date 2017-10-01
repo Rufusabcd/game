@@ -1,4 +1,4 @@
-.container {
+  .container {
     font-family: 'Germania One';
     padding: 10px;
   }
@@ -7,7 +7,7 @@
     
   }
   div button {
-    background-color: #16DB65;
+    background-color: #808080;
   }
   div button:hover {
     transform: scale(1.1);
