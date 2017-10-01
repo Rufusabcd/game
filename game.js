@@ -77,7 +77,7 @@ function playerPick(playerPick) {
 
     checkRoundWinner(playerPick, computerPick);
 }
-}
+
 function checkRoundWinner(playerPick, computerPick) {
     playerResultElem.innerHTML = computerResultElem.innerHTML = '';
   
