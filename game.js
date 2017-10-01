@@ -1,13 +1,14 @@
 var newGameBtn = document.getElementById('js-newGameButton');
 
 newGameBtn.addEventListener('click', newGame);
+
 var pickRock = document.getElementById('js-playerPick_rock'),
 pickPaper = document.getElementById('js-playerPick_paper'),
 pickScissors = document.getElementById('js-playerPick_scissors');
 
-pickRock.addEventListener('click', function() { playerPick('rock') });
-pickPaper.addEventListener('click', function() { playerPick('paper') });
-pickScissors.addEventListener('click', function() { playerPick('scissors') });
+pickRock.addEventListener('click', function() { playerPick('rock'); });
+pickPaper.addEventListener('click', function() { playerPick('paper'); });
+pickScissors.addEventListener('click', function() { playerPick('scissors'); });
 
 var gameState = 'notStarted',  //started // ended
 player = {
@@ -30,6 +31,7 @@ function setGameElements() {
         break;
         case 'ended':
             newGameBtn.innerText = 'Zagraj jeszcze raz';
+        break;
         case 'notStarted':
         default:
         newGameElem.style.display = 'block';
@@ -37,7 +39,8 @@ function setGameElements() {
         resultElem.style.display = 'none';
     }
 }
-console.log(setGameElements)
+setGameElements();
+
 var playerPointsElem = document.getElementById('js-playerPoints'),
 playerNameElem = document.getElementById('js-playerName'),
 computerPointsElem = document.getElementById('js-computerPoints');
@@ -56,7 +59,7 @@ function newGame() {
     console.log(playerPick);
 }
 var x = Math.random();
-Math.floor(Math.random()*3)
+Math.floor(Math.random()*3);
 function getComputerPick() {
     var possiblePicks = ['rock', 'paper', 'scissors'];
     return possiblePicks[Math.floor(Math.random()*3)];
@@ -102,4 +105,7 @@ function checkRoundWinner(playerPick, computerPick) {
   function setGamePoints() {
     playerPointsElem.innerHTML = player.score;
     computerPointsElem.innerHTML = computer.score;
+}
+function findEndofGame() {
+    if ()
 }
