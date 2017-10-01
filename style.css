@@ -1,5 +1,13 @@
-div button {
-    background-color: 
+.container {
+    font-family: 'Germania One';
+    padding: 10px;
+  }
+  .container .row .col-xs-5 {
+    padding: 5px;
+    
+  }
+  div button {
+    background-color: #16DB65;
   }
   div button:hover {
     transform: scale(1.1);
