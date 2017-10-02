@@ -116,6 +116,7 @@ function checkRoundWinner(playerPick, computerPick) {
     }
     else if (computer.score == 10) {
     computerResultElem.innerText = 'The winner is computer'
+    setGameElements();
     newGame();
     }
 }
