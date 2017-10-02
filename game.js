@@ -70,18 +70,9 @@ computerPickElem = document.getElementById('js-computerPick'),
 playerResultElem = document.getElementById('js-playerResult'),
 computerResultElem = document.getElementById('js-computerResult');
 
-function playerPick(playerPick) {
-    var computerPick = getComputerPick();
-
-    playerPickElem.innerHTML = playerPick;
-    computerPickElem.innerHTML = computerPick;
-
-    checkRoundWinner(playerPick, computerPick);
-}
-
 function checkRoundWinner(playerPick, computerPick) {
     playerResultElem.innerHTML = computerResultElem.innerHTML = '';
-  
+    
     var winnerIs = 'player';
   
       if (playerPick == computerPick) {
@@ -101,11 +92,22 @@ function checkRoundWinner(playerPick, computerPick) {
           computerResultElem.innerHTML = "Win!";
           computer.score++;
       }
+
+      setGamePoints();
   
   }
+  function playerPick(playerPick) {
+    var computerPick = getComputerPick();
+
+    playerPickElem.innerHTML = playerPick;
+    computerPickElem.innerHTML = computerPick;
+
+    checkRoundWinner(playerPick, computerPick);
+}
   function setGamePoints() {
     playerPointsElem.innerHTML = player.score;
     computerPointsElem.innerHTML = computer.score;
+    winCondition();
 }
   function winCondition() {
     if (player.score == 10) {
