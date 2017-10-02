@@ -94,6 +94,7 @@ function checkRoundWinner(playerPick, computerPick) {
       }
 
       setGamePoints();
+      winCondition();
   
   }
   function playerPick(playerPick) {
@@ -107,13 +108,14 @@ function checkRoundWinner(playerPick, computerPick) {
   function setGamePoints() {
     playerPointsElem.innerHTML = player.score;
     computerPointsElem.innerHTML = computer.score;
-    winCondition();
 }
   function winCondition() {
     if (player.score == 10) {
     playerResultElem.innerText = 'Whe winner is ' + player.name
+    newGame();
     }
     else if (computer.score == 10) {
     computerResultElem.innerText = 'The winner is computer'
+    newGame();
     }
 }
